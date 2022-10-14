@@ -1,0 +1,72 @@
+<script>
+
+// Tạo method để in ra các số chẵn nguyên dương nhỏ hơn 10
+    function printEvenNumb(){
+        for (var i = 0; i < 10; i = i + 2) {
+                    console.log(i);
+                }
+    }
+
+    printEvenNumb()
+
+    // Tạo method để in thông tin các account
+    function Department(departmentID, departmentName){
+                this.departmentID = departmentID;
+                this.departmentName = departmentName;
+            }
+
+    function Position(positionID, positionName){
+                this.positionID = positionID;
+                this.positionName = positionName;
+            }
+
+    function Account(accountID, email, username, fullname, departments, positions, createDate){
+                this.accountID = accountID;
+                this.email = email;
+                this.username = username;
+                this.fullname = fullname;
+                this.departments = departments;
+                this.position = positions;
+                this.createDate = createDate;
+            }
+
+    var department1 = new Department(1, "Sale")
+    var department2 = new Department(2, "Marketing")
+    var department3 = new Department(3, "Dev")
+
+    var position1 = new Position (1, "Manager")
+    var position2 = new Position (2, "Team Leader")
+    var position3 = new Position (3, "PM")
+
+    // account co 4 group
+    var account1 = new Account (1, "a@gmail.com", "Anguyen","Nguyen Van A", department1, position1, "21/10/2021" )
+    // account co 1 hoac 2 group
+    var account2 = new Account (2, "b@gmail.com", "Bnguyen","Nguyen Thi B", department3, position2, "21/11/2021" )
+    var account3 = new Account (3, "c@gmail.com", "Cnguyen","Nguyen Van C", department2, position3, "25/10/2021" )
+    // account k co group
+    var account4 = new Account (4, "d@gmail.com", "Dnguyen","Nguyen Van C", department1, position3, "25/10/2021" ) 
+    var account5 = new Account (5, "e@gmail.com", "Enguyen","Nguyen Van C", department2, position3, "25/10/2021" )
+
+    function printInfo(){
+        var accountList = [account1, account2, account3, account4, account5]
+        for (var i = 0; i < accountList.length; i++) {
+                console.log(
+                    "Thông tin account thứ " + (i + 1) + " là: \n" + 
+                    " Email: " + accountList[i].email + 
+                    " Full name: " + accountList[i].fullname +
+                    " Department: " + accountList[i].departments.departmentName
+                    );
+        }
+    }
+
+    printInfo()
+
+    // Tạo method để in ra các số nguyên dương nhỏ hơn 10
+    function printEvenNumb2(){
+        for (var i = 0; i < 10; i++) {
+                    console.log(i);
+                }
+    }
+
+    printEvenNumb2()
+</script>

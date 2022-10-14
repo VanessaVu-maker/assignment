@@ -1,0 +1,51 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* tạo màu nền và định chiều cao cho Menu */
+.menu {
+    background-color: #aec5d1;
+    height: 60px;
+   
+}
+.ul_menu {
+    /* Hiển thị theo dòng cho các li */
+    display: flex; 
+    height: 100%;
+    text-align: center;
+    /* Sử dụng để cho menu cách lề 50px */
+    margin-left: 50px;
+}
+
+.ul_menu li {
+    /* bỏ các dấu chấm ở đầu */
+    list-style: none;
+    width: 250px;
+    height: 100%;
+    
+}
+
+.ul_menu li a {
+    /* Bỏ gạch chân ở menu */
+    text-decoration: none;
+    /* Hiển thị theo khối để set chiều cao */
+    display: block;
+    font-size: 20px;
+    /* Tạo dấu gạch dọc phân cách giữa các menu */
+    border-right: #73acc9 solid 2px;
+    /* Tạo màu cho chữ trong menu và in đậm chữ */
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    /* tạo dãn cách chữ trong menu vào giữa */
+    height: 45px; 
+    padding-top: 15px;
+
+}
+
+.ul_menu li a:hover {
+    /* Đổi màu khi di chuột qua menu */
+   background-color: #e1e8ed    ;
+}

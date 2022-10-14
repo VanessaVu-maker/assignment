@@ -1,0 +1,80 @@
+<html>
+<head>
+    <style>
+        .td{
+            text-align: center;
+            padding: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giải phương trình bậc hai: ax<sup>2</sup> + bx + c = 0</h1>
+    <table border="1">
+        <tr>
+            <td> Nhập a</td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td> Nhập b</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td> Nhập c</td>
+            <td><input type="number" id="c"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td"><button onclick="calNum()">Tính toán</button></td>
+        </tr>
+        <tr>
+            <td>Kết quả </td>
+            <td><span id="kq1"></span> ; <span id="kq2"></span></td>
+        </tr>
+    </table>
+    <script >
+        function calNum(){
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = parseInt(document.getElementById("c").value);
+
+
+            // calculate discriminant
+            let discriminant = b * b - 4 * a * c;
+
+            // condition for real and different roots
+            if (discriminant > 0) {
+                root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+                // result
+                document.getElementById("kq1").innerHTML = root1;
+                document.getElementById("kq2").innerHTML = root2;
+
+;
+            }
+
+            // condition for real and equal roots
+            else if (discriminant == 0) {
+                root1 = root2 = -b / (2 * a);
+
+                // result
+                document.getElementById("kq1").innerHTML = root1;
+                document.getElementById("kq2").innerHTML = root2;
+
+            }
+
+            else if (discriminant < 0) {
+                var h = "phương trình vô nghiệm"
+                // result
+                document.getElementById("kq1").innerHTML = h;
+            }
+
+
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+

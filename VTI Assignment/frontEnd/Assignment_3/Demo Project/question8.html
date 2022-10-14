@@ -1,0 +1,17 @@
+<p>abcdef</p>
+
+<script>
+
+// document.addEventListener("keyup", function(e) {
+//   if (e.ctrlKey && e.keyCode == 67) {
+//     alert("Copy was successful");
+//   }
+
+var copyTextarea = document.getElementById("someTextAreaToCopy");
+copyTextarea.select(); //select the text area
+document.execCommand("copy"); 
+
+
+</script>
+
+

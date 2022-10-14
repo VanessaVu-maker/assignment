@@ -1,0 +1,74 @@
+<script>
+// Viết 1 chương trình cho phép nhập 1 số bất kỳ từ bàn phím, kiểm tra
+// xem số vừa nhập là số chẵn hay lẻ và in kết quả ra màn hình
+
+num = prompt("Input number: ")
+if (num % 2 === 0){
+    document.write("So chan")
+}
+else{
+    document.write("So le")
+}
+
+// Viết chương trình nhập một số bất kỳ trong khoảng [1 - 10], kiểm tra
+// và hiển thị ra màn hình theo cách tính sau:
+// - Điểm 9, 10 thì hiển thị ra màn hình: học sinh Giỏi
+// - Điểm 7, 8 thì hiển thị ra màn hình: học sinh Khá
+// - Điểm 5, 6 thì hiển thị ra màn hình: học sinh TB
+// Còn lại là học sinh Yếu
+
+num = prompt("Input number from 1 - 10: ")
+
+if (10 >= num >= 1){
+    if (Math.floor(num) == 9 || num == 10){
+    console.log("Hoc sinh Gioi");
+    }
+
+    else if (Math.floor(num) == 7 || Math.floor(num) == 8){
+    console.log("Hoc sinh Kha");
+    }
+
+    else if (Math.floor(num) == 5 || Math.floor(num) == 6){
+        console.log("Hoc sinh TB");
+    }
+    
+    else {
+    console.log("Hoc sinh Yeu");
+    }
+}
+else{
+    console.log("Please input number from 1 - 10");
+}
+// tai sao van lay gia tri = 0 va am duoc? // Note: ==, khong dung =
+
+
+//     Viết chương trình thực hiện các yêu cầu:
+// - Nhập 1 ký tự từ bàn phím (A-Z)
+// - In ra kết quả điểm tín chỉ của 1 sinh viên với cách tính như sau:
+// • Nếu là “A” điểm tính chỉ sẽ là: 4
+// • Nếu là “B” điểm tính chỉ sẽ là: 3
+// • Nếu là “C” điểm tính chỉ sẽ là: 2
+// • Nếu là “D” điểm tính chỉ sẽ là: 1
+// • Các ký tự khác ngoài 4 ký tự trên sẽ đưa ra thông báo: Sinh viên
+// này đã thôi học
+
+char = prompt("Insert char: ");
+
+if (char.toUpperCase() == "A"){
+    console.log("Credit: 4");
+}
+else if (char.toUpperCase() == "B"){
+    console.log("Credit: 3");
+}
+else if (char.toUpperCase() == "C"){
+    console.log("Credit: 2");
+}
+else if (char.toUpperCase() == "D"){
+    console.log("Credit: 1");
+}
+else{
+    console.log("Sinh vien nay da thoi hoc");
+}
+
+// Note: ==, khong dung =
+

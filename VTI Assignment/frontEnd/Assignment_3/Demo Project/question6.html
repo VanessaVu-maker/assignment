@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+
+        table{
+            width: 40%;
+            margin: auto;
+            border-style: solid;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Form khảo sát thông tin cá nhân: </h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" name="username" id="name"> </td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="number" name="telephone" id="phone"> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td><input type="radio" name="gender" value="Nữ"> Nữ</td>
+            <td><input type="radio" name="gender" value="Nam"> Nam</td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td id="interest"> 
+                <td><input type="checkbox" name="interest" value="music" id="r1"> Nghe nhạc</td>
+                <td><input type="checkbox" name="interest" value="soccer" id="r2"> Bóng đá</td>
+                <td><input type="checkbox" name="interest" value="travel" id="r3"> Du lịch</td>
+                <td><input type="checkbox" name="interest" value="book" id="r4"> Đọc sách</td>
+
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="display()">Hiển thị</button></td>
+        </tr>
+
+    </table>
+
+    <script>
+        function display(){
+            var name = document.getElementById("name").value;
+            var phone = parseInt(document.getElementById("phone").value);
+
+            var rates = document.getElementById('interest').value;
+            var rate_value;
+            if(rates =='music'){
+                rate_value = document.getElementById('r1').value;
+                
+            }else if(rates =='soccer'){
+                rate_value = document.getElementById('r2').value;
+                
+            }else if(rates =='travel'){
+                rate_value = document.getElementById('r3').value;
+            }  
+            else if(rates =='book'){
+                rate_value = document.getElementById('r4').value;
+            }  
+
+            alert("Họ tên: " + name + " | " + "Số điện thoại: " + phone + " | " + "So thich: " + rate_value)
+
+        }
+
+    </script>
+
+</body>

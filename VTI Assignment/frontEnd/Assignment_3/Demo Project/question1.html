@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+</style>
+
+<body>
+
+Number 1: <input type="text" id="num1" >
+<br>
+Number 2: <input type="text" id="num2" >
+<br>
+<br> 
+<button onclick="plusNum()">Add</button>
+<button onclick="subtractNum()">Subtract</button>
+<button onclick="mulNum()">Multiply</button>
+<button onclick="divNum()">Divide</button>
+<button onclick="remainNum()">%</button>
+
+Ket qua: <span id="output"></span>
+
+<script>
+
+function plusNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 + num2;
+}
+
+function subtractNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 - num2;
+}
+
+function mulNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 * num2;
+}
+
+function divNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 / num2;
+}
+
+function remainNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 % num2;
+}
+
+</script>
+
+</body>
+</html>

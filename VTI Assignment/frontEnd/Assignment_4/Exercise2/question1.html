@@ -1,0 +1,50 @@
+<head>
+    <style>
+
+
+        .section1{
+        background-color: grey;
+        height: 90px;
+        width: 90px;
+        }
+
+        .section2{
+        background-color: red;
+        height: 90px;
+        width: 90px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <p> Demonstrate fadeOut with different parameters</p>
+    <button class="btn1">Click to fade out boxes </button>
+    <button class="btn2">Click to fade in boxes </button>
+
+    <br>    <br>
+
+
+    <section class="section1"></section>
+    <br>
+    <section class="section2"></section>
+
+
+    <script>
+        $(".btn1").on("click", function(){
+            $("section").fadeOut();
+        });
+
+        $(".btn2").click(function(){
+        $(".section1").fadeIn();
+        $(".section2").fadeIn("swing");
+
+        });
+
+
+    </script>
+
+</body>
+

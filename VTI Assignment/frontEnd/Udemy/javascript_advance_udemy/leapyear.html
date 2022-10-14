@@ -1,0 +1,16 @@
+<script>
+    function isLeap (year) {
+        var yearInput = prompt("Enter the year: ")
+
+
+        if (yearInput % 4 === 0 && yearInput % 100 === 0 && yearInput % 400 === 0){
+            alert("Leap Year")
+        } else if (yearInput % 4 === 0 && yearInput % 100 !== 0)
+            alert("Leap Year")
+        else {
+            alert("Not leap year")
+        }
+    }
+
+    isLeap()
+</script>

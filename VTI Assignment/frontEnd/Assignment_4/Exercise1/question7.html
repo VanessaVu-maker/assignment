@@ -1,0 +1,22 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <p> Click or mouseover the pointer over me!</p>
+
+    <script>
+        $("p").mouseover(function(){
+            $("p").css("background-color", "gray");
+        });
+
+        $("p").on("click", function(){
+            $("p").css("background-color", "yellow");
+        });
+
+
+    </script>
+
+</body>
+

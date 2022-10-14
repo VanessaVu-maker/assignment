@@ -1,0 +1,186 @@
+
+
+<script>
+//     <!-- Nhập một xâu kí tự, đếm số lượng các từ trong xâu kí tự đó (các từ có
+// thể cách nhau bằng nhiều khoảng trắng ); -->
+
+    var string = prompt("Input string: ");
+    console.log(string.length);
+
+    // Nhập hai xâu kí tự s1, s2 nối xâu kí tự s2 vào sau xâu s1;
+
+    var string1 = prompt("Input string 1: ");
+    var string2 = prompt("Input string 2: ");
+    console.log(string1 + string2);
+
+    // Viết chương trình để người dùng nhập vào tên và kiểm tra, nếu tên chư
+    // viết hoa chữ cái đầu thì viết hoa lên
+
+    var name = prompt("Input name: ");
+
+    console.log(name.charAt(0).toUpperCase() + name.slice(1));
+
+    // Viết chương trình để người dùng nhập vào tên in từng ký tự trong tên
+    //     của người dùng ra
+    //     VD:
+    //     Người dùng nhập vào "Nam", hệ thống sẽ in ra
+    //     "Ký tự thứ 1 là: N"
+    //     "Ký tự thứ 1 là: A"
+    //     "Ký tự thứ 1 là: M"
+
+    var name1 = prompt("Input name: ");
+
+        for (var i = 0; i < name1.length; i++) {
+            console.log(
+                "Ki tu thứ " + (i + 1) + " là: \n" + name1[i]
+                );
+        }
+    
+    // Viết chương trình để người dùng nhập vào họ, sau đó yêu cầu người
+    // dùng nhập vào tên và hệ thống sẽ in ra họ và tên đầy đủ
+
+    var lastname = prompt("Input last name: ");
+
+    var firstname = prompt("Input first name ");
+
+    console.log(lastname + " " + firstname); 
+
+    // Viết chương trình yêu cầu người dùng nhập vào họ và tên đầy đủ và
+    // sau đó hệ thống sẽ tách ra họ, tên , tên đệm
+    // VD:
+    // Người dùng nhập vào "Nguyễn Văn Nam"
+    // Hệ thống sẽ in ra
+    // "Họ là: Nguyễn"
+    // "Tên đệm là: Văn"
+    // "Tên là: Nam"
+
+    
+    var name2 = prompt("Input full name: ");
+
+    var words = name2.split(" ");
+
+    console.log(
+            "Họ là: " + words[0] +
+            " \nTên đệm là: " + words[1] +
+            " \nTên là: " + words[2]
+            );
+
+    // trường hợp tên có nhiều hơn 3 chữ cái thì sao?
+
+    // Viết chương trình yêu cầu người dùng nhập vào họ và tên đầy đủ và
+    // chuẩn hóa họ và tên của họ như sau:
+    // a) Xóa dấu cách ở đầu và cuối và giữa của chuỗi người dùng nhập
+    // vào
+    // VD: Nếu người dùng nhập vào " nguyễn văn nam " thì sẽ
+    // chuẩn hóa thành "nguyễn văn nam"
+
+    var fullName = prompt("Input full name: ");
+    console.log(fullName.trim())
+
+    // b) Viết hoa chữ cái mỗi từ của người dùng
+    // VD: Nếu người dùng nhập vào " nguyễn văn nam " thì sẽ
+    // chuẩn hóa thành "Nguyễn Văn Nam"
+
+    var fullname = prompt("Input name: ");
+    var words = fullname.split(" ")
+
+    for (i = 0; i < words.length; i++) {
+        console.log(words[i].charAt(0).toUpperCase() + words[i].slice(1)
+        );
+    }
+
+    // ra duoc nhung bi xuong dong
+
+    //     Kiểm tra 2 chuỗi có là đảo ngược của nhau hay không.
+    // Nếu có xuất ra “OK” ngược lại “KO”.
+    // Ví dụ “word” và “drow” là 2 chuỗi đảo ngược nhau.
+
+    function anagramsCheck (string1, string2) {
+    var string1Check = string1.toUpperCase().split("").sort().join("");
+    var string2Check = string2.toUpperCase().split("").sort().join("");
+  
+    if (string1Check === string2Check) {
+            console.log("OK")
+        }
+    else{
+        console.log("KO")
+    }
+    }
+
+    anagramsCheck("Thanh Van", "nav hnaht")
+
+    // phai dua het len uppercase truoc roi moi split
+
+
+    // Tìm số lần xuất hiện ký tự "a" trong chuỗi
+
+    "Harry Potter and the Prisoner of Azkaban".split("a").length - 1;
+
+    // will not identify letter "A" (uppercase) using this method
+
+    // Đảo ngược chuỗi sử dụng vòng lặp
+    function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+    
+    reverseString('hello')
+
+// Kiểm tra một chuỗi có chứa chữ số hay không, nếu có in ra false ngược
+// lại true.
+
+
+// var string = prompt("Input your string: ")
+
+// for (i = 0; i <= string.length; i++){
+//     if (string[i] >= '0' && string[i] <= 9){
+//         console.log("false");
+//     } else {
+//         console.log("true")
+//     }
+// }
+
+// in ra combination cua false va true
+
+// Cho một chuỗi str, chuyển các ký tự được chỉ định sang một ký tự khác
+// cho trước.
+// Ví dụ:
+// "VTI Academy" chuyển ký tự 'e' sang '*' kết quả " VTI Acad*my"
+
+let text = "VTI Academy";
+let result = text.replace("e", "*");
+
+console.log(result)
+
+// Đảo ngược các ký tự của chuỗi cách nhau bởi dấu cách mà không dùng
+// thư viện.
+// Ví dụ: " I am developer " => "developer am I".
+// Các ký tự bên trong chỉ cách nhau đúng một dấu khoảng cách.
+// Gợi ý: Các bạn cần loại bỏ dấu cách ở đầu và cuối câu, thao tác cắt
+// chuỗi theo dấu cách
+
+function reverseString(str) {
+    return str.split(" ").reverse().join(" ");
+}
+reverseString("I love you mom");
+
+// Cho một chuỗi str và số nguyên n >= 0. Chia chuỗi str ra làm các phần
+// bằng nhau với n ký tự. Nếu chuỗi không chia được thì xuất ra màn
+// hình “KO”.
+
+var chunks = [];
+var str = prompt("input string: ")
+
+for (var i = 0; i < str.length; i += 2) {
+    chunks.push(str.substring(i, i + 2));
+}
+
+console.log(chunks)
+
+// khong the tu chon so nguen n truoc duoc
+</script>
+
+</script>

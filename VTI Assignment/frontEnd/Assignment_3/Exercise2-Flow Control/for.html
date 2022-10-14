@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>exercise3/question1</title>
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        
+        <script>
+            function Department(departmentID, departmentName){
+                this.departmentID = departmentID;
+                this.departmentName = departmentName;
+            }
+
+            function Position(positionID, positionName){
+                this.positionID = positionID;
+                this.positionName = positionName;
+            }
+
+            function Account(accountID, email, username, fullname, departments, positions, createDate){
+                this.accountID = accountID;
+                this.email = email;
+                this.username = username;
+                this.fullname = fullname;
+                this.departments = departments;
+                this.position = positions;
+                this.createDate = createDate;
+            }
+
+            function Group(groupID, groupName, creatorID, createDate){
+                this.groupID = groupID;
+                this.groupName = groupName;
+                this.creatorID = creatorID;
+                this.createDate =  createDate;
+
+            }
+
+            function GroupAccount(groupID, accountID, joinDate){
+                this.groupID = groupID;
+                this.accountID = accountID;
+                this.joinDate =  joinDate;
+
+            }
+
+            var department1 = new Department(1, "Sale")
+            var department2 = new Department(2, "Marketing")
+            var department3 = new Department(3, "Dev")
+
+            var position1 = new Position (1, "Manager")
+            var position2 = new Position (2, "Team Leader")
+            var position3 = new Position (3, "PM")
+
+            // account co 4 group
+            var account1 = new Account (1, "a@gmail.com", "Anguyen","Nguyen Van A", department1, position1, "21/10/2021" )
+            // account co 1 hoac 2 group
+            var account2 = new Account (2, "b@gmail.com", "Bnguyen","Nguyen Thi B", department3, position2, "21/11/2021" )
+            var account3 = new Account (3, "c@gmail.com", "Cnguyen","Nguyen Van C", department2, position3, "25/10/2021" )
+            // account k co group
+            var account4 = new Account (4, "d@gmail.com", "Dnguyen","Nguyen Van C", department1, position3, "25/10/2021" ) 
+            var account5 = new Account (5, "e@gmail.com", "Enguyen","Nguyen Van C", department2, position3, "25/10/2021" )
+
+
+            var group1 = new Group (1, "JavaFresher", account1, "21/10/2021" )
+            var group2 = new Group (2, "C# Fresher", account3, "21/10/2021" )
+            var group3 = new Group (3, "Sales", account2, "21/10/2021" )
+            var group4 = new Group (4, "vv..vv", account2, "21/10/2021" )
+
+
+            var groupAccount1 = new GroupAccount (group1, account3, "21/10/2021" )
+            var groupAccount2 = new GroupAccount (group2, account2, "21/10/2021" )
+            var groupAccount3 = new GroupAccount (group3, account2, "21/10/2021" )
+            var groupAccount4 = new GroupAccount (group4, account1, "21/10/2021" )
+            var groupAccount5 = new GroupAccount (group1, account1, "21/10/2021" )
+            var groupAccount6 = new GroupAccount (group2, account1, "21/10/2021" )
+            var groupAccount7 = new GroupAccount (group3, account1, "21/10/2021" )
+            var groupAccount8 = new GroupAccount (group4, account1, "21/10/2021" )
+
+            // Question 10: in ra thông tin các account bao gồm: Email, FullName và tên
+            //     phòng ban của họ theo định dạng như sau:
+            //     Thông tin account thứ 1 là:
+            //     Email: NguyenVanA@gmail.com
+            //     Full name: Nguyễn Văn A
+            //     Phòng ban: Sale
+            //     Thông tin account thứ 2 là:
+            //     Email: NguyenVanB@gmail.com
+            //     Full name: Nguyễn Văn B
+            //     Phòng ban: Marketting
+            
+            var accountList = [account1, account2, account3, account4, account5]
+            for (var i = 0; i < accountList.length; i++) {
+                console.log(
+                    "Thông tin account thứ " + (i + 1) + " là: \n" + 
+                    " Email: " + accountList[i].email + 
+                    " Full name: " + accountList[i].fullname +
+                    " Department: " + accountList[i].departments.departmentName
+                    );
+            }
+            
+            //  Question 11: in ra thông tin các phòng ban bao gồm: id và name theo định
+            // dạng sau:
+            // Thông tin department thứ 1 là:
+            // Id: 1
+            // Name: Sale
+            // Thông tin department thứ 2 là:
+            // Id: 2
+            // Name: Marketing
+            var departmentList = [department1, department2, department3]
+            for (var i = 0; i < departmentList.length; i++) {
+                console.log(
+                    "Thông tin department thứ " + (i + 1) + " là: \n" + 
+                    " ID: " + departmentList[i].departmentID + 
+                    " Name: " + departmentList[i].departmentName 
+                    );
+            }
+
+            // Question 12: Chỉ in ra thông tin 2 department đầu tiên theo định dạng như
+            // Question 10
+
+            var accountList = [account1, account2, account3, account4, account5]
+            for (var i = 0; i < 2; i++) {
+                console.log(
+                    "Thông tin account thứ " + (i + 1) + " là: \n" + 
+                    " Email: " + accountList[i].email + 
+                    " Full name: " + accountList[i].fullname +
+                    " Department: " + accountList[i].departments.departmentName
+                    );
+            }
+
+            // Question 13: in ra thông tin tất cả các account ngoại trừ account thứ 2
+            var accountList = [account1, account2, account3, account4, account5]
+            for (var i = 0; i < accountList.length; i++) {
+                if (i !== 1){
+                    console.log(
+                    "Thông tin account thứ " + (i + 1) + " là: \n" + 
+                    " Email: " + accountList[i].email + 
+                    " Full name: " + accountList[i].fullname +
+                    " Department: " + accountList[i].departments.departmentName
+                    );
+                }
+            }
+
+            // Question 14: in ra thông tin tất cả các account có id < 4
+            var accountList = [account1, account2, account3, account4, account5]
+            for (var i = 0; i < 3; i++) {
+                    console.log(
+                    "Thông tin account thứ " + (i + 1) + " là: \n" + 
+                    " Email: " + accountList[i].email + 
+                    " Full name: " + accountList[i].fullname +
+                    " Department: " + accountList[i].departments.departmentName
+                    );
+                }
+
+            // Question 15: in ra các số chẵn nhỏ hơn hoặc bằng 20
+            for (var i = 0; i <= 20; i = i + 2) {
+                    console.log(i);
+                }
+
+        </script>
+    </body>
+</html>

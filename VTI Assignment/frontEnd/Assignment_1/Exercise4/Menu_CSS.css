@@ -1,0 +1,71 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* tạo màu nền và định chiều cao cho Menu */
+.menu {
+    background-color: #c7050f;
+    height: 60px;
+   
+}
+.ul_menu {
+    /* Hiển thị theo dòng cho các li */
+    display: flex; 
+    height: 100%;
+    text-align: center;
+    /* Sử dụng để cho menu cách lề 50px */
+    margin-left: 50px;
+}
+
+.ul_menu li {
+    /* bỏ các dấu chấm ở đầu */
+    list-style: none;
+    width: 250px;
+    height: 100%;
+    
+}
+
+.ul_menu li a {
+    /* Bỏ gạch chân ở menu */
+    text-decoration: none;
+    /* Hiển thị theo khối để set chiều cao */
+    display: block;
+    font-size: 20px;
+    /* Tạo màu cho chữ trong menu và in đậm chữ */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    /* tạo dãn cách chữ trong menu vào giữa */
+    height: 45px; 
+    padding-top: 15px;
+
+}
+
+.ul_menu li a:hover {
+    /* Đổi màu khi di chuột qua menu */
+   background-color: #630303  ;
+   height: 60px
+}
+
+.banner {
+    background-color: #c77905;
+    height: 80px;
+}
+
+.body-text{
+    /* margin-left: 150px;
+    margin-right: 550px; */
+    margin: 0;
+    border: solid #e1ebe9;
+    border-width: 0 150px 0 150px;
+    display: inline-block;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 400px;
+
+    
+}
+

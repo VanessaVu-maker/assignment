@@ -1,0 +1,103 @@
+* {
+    /* Reset và căn đều trái phải cho trang web */
+    margin: 0px auto;
+    padding: 0px;
+}
+.container {
+    width: 1200px;
+    /* background-color: rgb(230, 173, 190); */
+/* Sắp xếp theo các cột theo bố cục */
+    display: flex;
+    flex-direction: column;
+}
+.wraper {
+    width: 100%;
+    /* background-color: lightcyan; */
+    /* định chiều cao cho nội dung 400px */
+    height: 400px;
+}
+.main1 {
+    width: 100%;
+    height: 50px;
+    /* background-color: lightslategray; */
+    /* Căn giữa cho thẻ p bên dưới */
+    text-align: center;
+    /* Giãn cách chữ so với boder phía trên cho chữ trong thẻ p */
+    padding-top: 20px;
+}
+.main1 p {
+    /* định dạng lại chữ bên trong */
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.main2 {
+    width: 100%;
+    height: 330px;
+    /* Hiển thị các cột trên cùng dòng */
+    display: flex;
+}
+.main2_left {
+    /* định chiều rộng cho mỗi cột nội dung 400px */
+    width: 400px;
+    height: 330px;
+    /* background-color: rgb(211, 211, 32); */
+}
+.main2_left1, .main2_left2 {
+    width: 100%;
+    height: 165px;
+}
+.main2_left1_title {
+    display: flex;
+    width: 100%;
+    height: 65px;
+}
+
+.main2_left1_title p {
+    width: 80%;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.main2_left1_title img {
+    width: 16%;
+    margin-right: 10px;
+}
+.main2_left1 > p, .main2_left2 > p, .main2_right1 > p, .main2_right2 > p {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+/* .main2_left1_title {
+
+}
+.main2_left1_title img {
+
+}
+.main2_left2 {
+    
+} */
+.main2_center {
+    /* định chiều rộng cho mỗi cột nội dung 400px */
+    width: 400px;
+    height: 330px;
+    background-color: rgb(40, 37, 206);
+}
+.main2_center img {
+    width: 100%;
+    height: 100%;
+}
+.main2_right {
+    /* định chiều rộng cho mỗi cột nội dung 400px */
+    width: 400px;
+    height: 330px;
+    /* background-color: rgb(255, 224, 243); */
+}
+/* .main2_right1 {
+    
+}
+.main2_right2 {
+    
+} */

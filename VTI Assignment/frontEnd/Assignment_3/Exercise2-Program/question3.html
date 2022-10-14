@@ -1,0 +1,40 @@
+<!-- Viết chương trình thực hiện các yêu cầu:
+- Nhập quãng đường S mà một người đi bộ phải đi (tính bằng mét)
+- Tính và in ra màn hình thời gian người đi bộ đi hết quãng đường
+S theo cách tính sau:
+o 3000m đầu tiên mỗi mét đi hết 1 giây
+o 2000m tiếp theo mỗi mét đi hết 2 giây
+o 1000m tiếp theo mỗi mét đi hết 3 giây
+o Phần còn lại mỗi mét đi hết 5 giây -->
+
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <script>
+    distance = prompt("Input distance S: ");
+    
+    var time;
+
+    if (distance > 6000){
+        console.log(time == 3000*1 + 2000*2 + 1000*3 + (distance - 6000)*5);
+    }
+
+    else if (6000 >= distance > 5000){
+        console.log(time == 3000*1 + 2000*2 + (distance - 5000)*3);
+    }
+
+    else if (5000 >= distance > 3000){
+        console.log(time == 3000*1 + (distance - 3000)*2);
+    }
+
+    else if (distance <= 3000){
+        console.log(time == distance*1);
+    } 
+
+    </script>
+</body>
+</html>

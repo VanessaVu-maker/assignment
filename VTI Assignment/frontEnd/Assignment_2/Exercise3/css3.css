@@ -1,0 +1,45 @@
+
+    header{
+        border-style: solid;
+        border-width: 5px;
+        border-color: pink;
+        height: 110px;
+        /* width: 900px */
+    }
+
+
+    .sidebar_right{
+        border-style: solid;
+        border-width: 5px;
+        border-color: yellow;
+        height: 500px;
+        width: 300px;
+        position: absolute;
+        margin-left: 1025px;
+    }
+
+    main{
+        border-style: solid;
+        border-width: 5px;
+        border-color: red;
+        height: 500px;
+        width: 695px;
+        position: absolute;
+        margin-left: 315px;
+    }
+
+    .sidebar_left{
+        border-style: solid;
+        border-width: 5px;
+        border-color: blue;
+        height: 500px;
+        width: 300px;
+    }
+
+
+    footer{
+        border-style: solid;
+        border-width: 5px;
+        border-color: green;
+        height: 110px
+    }

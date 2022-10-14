@@ -1,0 +1,46 @@
+<!-- // Question 6:
+// Viết chương trình thực hiện các yêu cầu:
+// - Nhập 1 số nguyên dương n bất kỳ, biết rằng n nằm trong
+// khoảng [1-10].
+// - Đếm xem có bao nhiêu số chia hết cho 2 trong khoảng [1-n]
+ -->
+
+ <!DOCTYPE html>
+<html>
+
+<body>
+
+Input a number from 1 - 10: <input type="text" id="num">
+
+<br>
+
+<button onclick="countNum()">Count</button>
+
+Ket qua: <span id="output"></span>
+
+<script>
+
+function countNum(num) {
+    
+    var num = parseInt(document.getElementById("num").value);
+
+    numList = []
+
+    if (num>10 || num <1){
+        alert("Please input a number from 1 - 10")
+    } else {
+        for (i = 1; i<=num; i++){
+        if (i%2 == 0){
+            numList.push(i)
+        }
+        }
+    }
+    
+    document.getElementById("output").innerHTML = numList.length;
+}
+
+</script>
+
+</body>
+
+</html>

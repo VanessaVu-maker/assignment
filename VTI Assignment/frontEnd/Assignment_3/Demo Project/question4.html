@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+</style>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td>Number 1</td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Number 2 </td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td>Option </td>
+            <td>
+                <select id="operator">
+                    <option value="add" onchange="plusNum();">Add</option>
+                    <option value="subtract" onchange="subtractNum();">Subtract</option>
+                    <option value="mul" onchange="mulNum();">Multiply</option>
+                    <option value="div" onchange="divNum();">Divide</option>
+                    <option value="remain" onchange="remainNum();">%</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Result </td>
+            <td><span id="Result"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td"><button onclick="calNum()">Calculate</button></td>
+        </tr>
+    </table>
+
+
+<script>
+
+function plusNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 + num2;
+}
+
+function subtractNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 - num2;
+}
+
+function mulNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 * num2;
+}
+
+function divNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 / num2;
+}
+
+function remainNum(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    document.getElementById("output").innerHTML = num1 % num2;
+}
+
+</script>
+
+</body>
+</html>

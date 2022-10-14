@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+
+        table{
+            width: 40%;
+            margin: auto;
+            border-style: solid;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Form </h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" name="username" id="name"> </td><br>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="number" name="telephone" id="phone"></td><br>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email" id="email"></td><br>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="password" name="password"></td><br>
+        </tr>
+        <tr>
+            <td>Retype password</td>
+            <td><input type="text" id="repassword" name="repassword"></td><br>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="submit()">Hiển thị</button></td>
+        </tr>
+
+    </table>
+
+    <p id="output"></p>
+
+    <script>
+        function submit(){
+            var name = parseInt(document.getElementById("name").value);
+            var phone = parseInt(document.getElementById("phone").value);
+            var email = parseInt(document.getElementById("email").value);
+
+            document.getElementById("output").innerHTML = "Họ tên: " + name + " | " + "Số điện thoại: " + phone + " | " + "Email: " + email
+
+        }
+
+    </script>
+
+</body>
+
+</html>

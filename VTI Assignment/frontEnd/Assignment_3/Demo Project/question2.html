@@ -1,0 +1,47 @@
+<html>
+<head>
+    <style>
+        .td{
+            text-align: center;
+            padding: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính chu vi diện tích</h1>
+    <table border="1">
+        <tr>
+            <td> Nhập độ dài chiều dài thứ nhất</td>
+            <td><input type="number" id="width1"></td>
+        </tr>
+        <tr>
+            <td> Nhập độ dài chiều dài thứ hai</td>
+            <td><input type="number" id="width2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td"><button onclick="calNum()">Tính toán</button></td>
+        </tr>
+        <tr>
+            <td>Chu vi là: </td>
+            <td><span id="chuvi"></span></td>
+        </tr>
+        <tr>
+            <td>Diện tích là: </td>
+            <td><span id="dientich"></span></td>
+        </tr>
+    </table>
+    <script >
+        function calNum(){
+            var width1 = parseInt(document.getElementById("width1").value);
+            var width2 = parseInt(document.getElementById("width2").value);
+
+            document.getElementById("chuvi").innerHTML = (width1 + width2)*2;
+            document.getElementById("dientich").innerHTML = width1*width2;
+        }
+        
+    </script>
+</body>
+</html>
+
+
+

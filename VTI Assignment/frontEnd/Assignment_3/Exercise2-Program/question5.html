@@ -1,0 +1,64 @@
+<!-- Viết chương trình nhập vào số tháng, số năm. Sau đó in ra số ngày của
+tháng đó. -->
+
+<!-- Chú ý:
+- Năm nhuận tháng 2 có 29 ngày.
+- Năm nhuận là năm chia hết cho 4 và không chia hết cho 100
+hoặc chia hết cho 400. -->
+
+
+
+<html>
+    <head></head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>Nhập tháng</td>
+                <td><input id="month" type="number" value="month"></td>
+            </tr>
+            <tr>
+                <td>Nhập năm</td>
+                <td><input id="year" type="number" value="year"></td>
+            </tr>
+            <tr>
+                <td colspan = "2"><button onclick="calDate()">Tính toán</button></td>
+            </tr>
+            <tr>
+                <td>Số ngày trong tháng</td>
+                <td><span id="result"></span></td>
+            </tr>
+        </table>
+
+        <script>
+            function calDate(){
+            var month = parseInt(document.getElementById("month").value);
+            var year = parseInt(document.getElementById("year").value);
+
+            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+            document.getElementById("result").innerHTML = 31;
+            } 
+            else if (month == 4 || month == 6 || month == 9 || month == 11){
+            document.getElementById("result").innerHTML = 30;
+            } 
+            else if (month == 2){
+                if (year >= 0){
+                    if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0){
+                    document.getElementById("result").innerHTML = 29;
+                    } else if (year % 4 === 0 && year % 100 !== 0){
+                    document.getElementById("result").innerHTML = 29;
+                    } else {
+                    document.getElementById("result").innerHTML = 28;
+                }
+            }
+                else{
+                    document.getElementById("result").innerHTML = "invalid year";
+                }
+            }
+            else{
+            document.getElementById("result").innerHTML = "invalid month";
+            }
+        }
+        </script>
+
+    </body>
+</html>
